@@ -39,6 +39,11 @@ record ADAMRecord {
     union { boolean, null } failedVendorQualityChecks = false;
     union { boolean, null } duplicateRead = false;
 
+    // Read error correction flags (all default to false)
+    union { boolean, null } requiresErrorCorrection = false;
+    union { boolean, null } failedErrorCorrection = false;
+    union { boolean, null } errorCorrected = false;
+
     // Commonly used optional attributes
     union { null, string } mismatchingPositions = null;
 
